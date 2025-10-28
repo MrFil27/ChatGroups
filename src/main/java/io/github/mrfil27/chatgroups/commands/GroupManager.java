@@ -2,7 +2,6 @@ package io.github.mrfil27.chatgroups.commands;
 
 import io.github.mrfil27.chatgroups.ChatGroups;
 import io.github.mrfil27.chatgroups.commands.groups.*;
-import net.endlesshorizons.chatgroups.commands.groups.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
