@@ -1,7 +1,7 @@
 package io.github.mrfil27.chatgroups.commands.groups;
 
 import io.github.mrfil27.chatgroups.ChatGroups;
-import io.github.mrfil27.chatgroups.commands.GroupManager;
+import io.github.mrfil27.chatgroups.commands.GroupCommandManager;
 import io.github.mrfil27.chatgroups.commands.SubCommand;
 import org.bukkit.entity.Player;
 
@@ -38,7 +38,7 @@ public class Help extends SubCommand {
         p.sendMessage(ChatGroups.format("&a&lComandi di ChatGroups"));
 
         if(p.hasPermission("cg.admin")){
-            for(SubCommand subCommand : GroupManager.getSubCommands()){
+            for(SubCommand subCommand : GroupCommandManager.getSubCommands()){
                 p.sendMessage(ChatGroups.format("&a" + subCommand.getSyntax() + " &8» &7" + subCommand.getDescription()));
             }
         }else if(p.hasPermission("cg.owner")){

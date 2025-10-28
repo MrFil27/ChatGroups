@@ -3,7 +3,7 @@ package io.github.mrfil27.chatgroups;
 import io.github.mrfil27.chatgroups.api.ChatGroupsAPI;
 import io.github.mrfil27.chatgroups.api.Control;
 import io.github.mrfil27.chatgroups.commands.FastMessage;
-import io.github.mrfil27.chatgroups.commands.GroupManager;
+import io.github.mrfil27.chatgroups.commands.GroupCommandManager;
 import io.github.mrfil27.chatgroups.commands.talk.Action;
 import io.github.mrfil27.chatgroups.commands.talk.Scream;
 import io.github.mrfil27.chatgroups.commands.talk.Whisper;
@@ -40,7 +40,7 @@ public final class ChatGroups extends JavaPlugin {
 
         //Commands
         CommandManager cmdMgr = new CommandManager(this);
-        cmdMgr.register("chatGroups", new GroupManager(this));
+        cmdMgr.register("chatGroups", new GroupCommandManager(this));
         cmdMgr.register("message", new FastMessage(this));
         cmdMgr.register("action", new Action());
         cmdMgr.register("scream", new Scream());

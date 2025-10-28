@@ -10,11 +10,11 @@ import org.bukkit.entity.Player;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class GroupManager implements CommandExecutor {
+public class GroupCommandManager implements CommandExecutor {
 
     private static final ArrayList<SubCommand> subCommands = new ArrayList<>();
 
-    public GroupManager(ChatGroups plugin){
+    public GroupCommandManager(ChatGroups plugin){
         subCommands.add(new Help());
         subCommands.add(new Create(plugin));
         subCommands.add(new AddOwner(plugin));
