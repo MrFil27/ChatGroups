@@ -1,0 +1,27 @@
+name: ChatGroups
+version: '${project.version}'
+main: io.github.mrfil27.chatgroups.ChatGroups
+api-version: '1.16'
+commands:
+  chatGroups:
+    usage: /<command>
+    aliases:
+      - cg
+  message:
+    usage: /<command>
+    aliases:
+      - msg
+  action:
+    usage: /<command>
+    aliases:
+      - azione
+      - a
+  scream:
+    usage: /<command>
+    aliases:
+      - urlo
+  whisper:
+    usage: /<command>
+    aliases:
+      - bisbiglio
+      - bisbiglia

@@ -1,0 +1,4 @@
+Create group: "cg.admin"
+Reload config: "cg.admin"
+Add owners: "cg.owner"
+Use plugin: "cg.use"

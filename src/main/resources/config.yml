@@ -1,0 +1,14 @@
+chat-radius: 10
+default-prefixes:
+  action:
+    prefix: "&6&lAzione &f%player-name% &8» &7"
+    radius: 10
+  scream:
+    prefix: "&b&lURLO &f%player-name% &8» &7"
+    radius: 20
+  whisper:
+    prefix: "&a&lBISBIGLIO &8»"
+    radius: 1
+groups:
+  global:
+    members: []
