@@ -1,5 +1,6 @@
 package io.github.mrfil27.chatgroups.api;
 
+import io.github.mrfil27.chatgroups.ChatGroups;
 import io.github.mrfil27.chatgroups.api.execute.ChatControlGroupManager;
 import io.github.mrfil27.chatgroups.api.execute.TalkControlActionManager;
 import io.github.mrfil27.chatgroups.api.manager.ActionManager;
@@ -11,8 +12,13 @@ import java.util.UUID;
 
 public class Control implements ChatGroupsAPI{
 
-    private final ActionManager actionManager = new TalkControlActionManager();
-    private final ChatGroupManager groupManager = new ChatControlGroupManager();
+    private final ActionManager actionManager;
+    private final ChatGroupManager groupManager;
+
+    public Control(ChatGroups plugin) {
+        this.actionManager = new TalkControlActionManager();
+        this.groupManager = new ChatControlGroupManager(plugin);
+    }
 
     @Override
     public boolean hasActiveChat(Player player) {

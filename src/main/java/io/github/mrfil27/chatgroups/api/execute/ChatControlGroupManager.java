@@ -7,7 +7,11 @@ import org.bukkit.entity.Player;
 
 public class ChatControlGroupManager implements ChatGroupManager {
 
-    private final ChatGroups plugin = ChatGroups.getInstance();
+    private final ChatGroups plugin;
+
+    public ChatControlGroupManager(ChatGroups plugin) {
+        this.plugin = plugin;
+    }
 
     @Override
     public void create(String name, Player owner) {

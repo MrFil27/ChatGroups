@@ -27,7 +27,7 @@ public final class ChatGroups extends JavaPlugin {
     @Override
     public void onEnable() {
         //APIs
-        this.chatAPI = new Control();
+        this.chatAPI = new Control(this);
 
         //Configs
         Configs.createConfig(this);
@@ -63,10 +63,6 @@ public final class ChatGroups extends JavaPlugin {
 
     public static Map<String, FileConfiguration> getConfigCached(){
         return configCached;
-    }
-
-    public static ChatGroups getInstance(){
-        return ChatGroups.getPlugin(ChatGroups.class);
     }
 
     public static String format(String msg){
