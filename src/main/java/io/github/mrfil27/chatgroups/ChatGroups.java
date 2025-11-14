@@ -21,13 +21,13 @@ import java.util.*;
 
 public final class ChatGroups extends JavaPlugin {
 
-    private ChatGroupsAPI chatAPI;
+    private static ChatGroupsAPI chatAPI;
     private static final Map<String, FileConfiguration> configCached = new HashMap<>();
 
     @Override
     public void onEnable() {
         //APIs
-        this.chatAPI = new Control(this);
+        chatAPI = new Control(this);
 
         //Configs
         Configs.createConfig(this);
@@ -57,7 +57,7 @@ public final class ChatGroups extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage(format("&2[ChatGroups] &aPlugin has been enabled successfully."));
     }
 
-    public ChatGroupsAPI getApi(){
+    public static ChatGroupsAPI getApi(){
         return chatAPI;
     }
 
