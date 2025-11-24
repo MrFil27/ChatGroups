@@ -1,7 +1,7 @@
 package io.github.mrfil27.chatgroups;
 
 import io.github.mrfil27.chatgroups.api.ChatGroupsAPI;
-import io.github.mrfil27.chatgroups.api.Control;
+import io.github.mrfil27.chatgroups.api.ChatGroupsImpl;
 import io.github.mrfil27.chatgroups.commands.FastMessage;
 import io.github.mrfil27.chatgroups.commands.GroupCommandManager;
 import io.github.mrfil27.chatgroups.commands.talk.Action;
@@ -27,7 +27,7 @@ public final class ChatGroups extends JavaPlugin {
     @Override
     public void onEnable() {
         //APIs
-        chatAPI = new Control(this);
+        chatAPI = new ChatGroupsImpl(this);
 
         //Configs
         Configs.createConfig(this);

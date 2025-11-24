@@ -4,7 +4,7 @@ import io.github.mrfil27.chatgroups.api.manager.ActionManager;
 import io.github.mrfil27.chatgroups.utils.TalkControl;
 import org.bukkit.entity.Player;
 
-public class TalkControlActionManager implements ActionManager {
+public class ActionManagerImpl implements ActionManager {
     @Override
     public void scream(Player player, String message) {
         TalkControl.scream(player, message);

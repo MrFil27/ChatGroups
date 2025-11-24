@@ -130,9 +130,8 @@ public class GroupControl {
 
     public void createChatGroup(Player owner, String name){
         List<String> owners = config.getStringList("groups." + name + ".owners");
-        if(owners.isEmpty()){
-            owners = new ArrayList<>();
-        }
+        if(owners.isEmpty()) owners = new ArrayList<>();
+
         owners.add(owner.getUniqueId().toString());
         plugin.getConfig().set("groups." + name + ".owners", owners);
         plugin.getConfig().set("groups." + name + ".members", owners);
@@ -223,6 +222,12 @@ public class GroupControl {
             playerChats.put(playerId, chat);
             player.sendMessage(ChatGroups.format("&aOra stai parlando nella chat &f" + chat + "&a."));
         }
+    }
+
+    public void deleteChat(String name){
+        plugin.getConfig().set("groups." + name, null);
+        plugin.saveConfig();
+        ChatGroups.getConfigCached().put("cg-def-config", plugin.getConfig());
     }
 
 }
